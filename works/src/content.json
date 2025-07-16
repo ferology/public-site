@@ -1,0 +1,97 @@
+{
+  "personal": {
+    "name": "Francesco",
+    "title": "UX Designer crafting meaningful digital experiences through user-centered design and strategic thinking.",
+    "photo": "./assets/francesco_photo.jpg",
+    "email": "francesco@example.com",
+    "linkedin": "https://linkedin.com/in/francesco-fera",
+    "phone": "+1234567890"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "description": "UX Designer crafting meaningful digital experiences through user-centered design and strategic thinking.",
+    "buttons": {
+      "primary": {
+        "text": "Learn More",
+        "action": "scroll",
+        "target": "about"
+      },
+      "secondary": {
+        "text": "Get In Touch",
+        "action": "scroll",
+        "target": "contact"
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "I'm a passionate UX designer with expertise in creating user-centered digital experiences. My approach combines strategic thinking with creative problem-solving to deliver impactful design solutions.",
+    "journey": {
+      "title": "My Journey",
+      "content": [
+        "With years of experience in UX design, I've had the privilege of working with diverse teams and clients to create meaningful digital experiences. My passion lies in understanding user needs and translating them into intuitive, accessible, and beautiful interfaces.",
+        "I believe great design is not just about aesthetics—it's about solving real problems and creating value for both users and businesses. Every project is an opportunity to make a positive impact through thoughtful, user-centered design."
+      ]
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "list": [
+        "User Experience Design",
+        "Design Systems",
+        "Prototyping",
+        "User Research",
+        "Interface Design",
+        "Design Strategy"
+      ]
+    }
+  },
+  "process": {
+    "title": "My Design Process",
+    "subtitle": "A systematic approach to creating user-centered solutions that deliver measurable results.",
+    "steps": [
+      {
+        "icon": "Target",
+        "title": "Research & Discovery",
+        "description": "Understanding user needs, business goals, and market context through comprehensive research and analysis."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Ideation & Strategy",
+        "description": "Developing creative solutions and strategic approaches based on research insights and user requirements."
+      },
+      {
+        "icon": "Zap",
+        "title": "Design & Prototype",
+        "description": "Creating high-fidelity designs and interactive prototypes to validate concepts and user flows."
+      },
+      {
+        "icon": "Users",
+        "title": "Test & Iterate",
+        "description": "Conducting user testing and iterating on designs based on feedback and performance metrics."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to create something amazing? I'd love to hear about your project and discuss how we can bring your vision to life.",
+    "buttons": {
+      "primary": {
+        "text": "Get In Touch",
+        "action": "email",
+        "target": "francesco@example.com"
+      },
+      "secondary": {
+        "text": "LinkedIn",
+        "action": "link",
+        "target": "https://linkedin.com/in/francesco-fera"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Francesco Fera. All rights reserved."
+  },
+  "navigation": {
+    "sections": ["home", "about", "process", "contact"]
+  }
+}
+
