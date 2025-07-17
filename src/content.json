@@ -1,15 +1,15 @@
 {
   "personal": {
     "name": "Francesco",
-    "title": "UX Designer crafting meaningful digital experiences through user-centered design and strategic thinking.",
+    "title": "I'm an experience consultant and organizational strategist working at the intersection of design, technology, and transformation.",
     "photo": "./assets/francesco_photo.jpg",
-    "email": "francesco@example.com",
-    "linkedin": "https://linkedin.com/in/francesco-fera",
+    "email": "f3r4.mac@gmail.com",
+    "linkedin": "https://linkedin.com/in/ferology",
     "phone": "+1234567890"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "description": "UX Designer crafting meaningful digital experiences through user-centered design and strategic thinking.",
+    "description": "Experience practitioner crafting meaningful digital experiences through user-centered design and strategic thinking.",
     "buttons": {
       "primary": {
         "text": "Learn More",
@@ -88,7 +88,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Francesco Fera. All rights reserved."
+    "copyright": "© 2024 Francesco F. All rights reserved."
   },
   "navigation": {
     "sections": ["home", "about", "process", "contact"]
