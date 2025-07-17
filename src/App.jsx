@@ -113,7 +113,7 @@ function App() {
               animate={{ opacity: 1, x: 0 }}
               className="text-xl font-bold text-primary"
             >
-              {content.personal.name} Fera
+              {content.personal.name} F.
             </motion.div>
 
             {/* Desktop Navigation */}
