@@ -26,6 +26,28 @@ import {
   Lightbulb,
   Zap,
 } from "lucide-react";
+
+// Import kinetic interactions
+import {
+  KineticCursor,
+  ScrollProgress,
+  MagneticButton,
+  TiltCard,
+  GlitchText,
+  RevealOnScroll,
+  StaggerContainer,
+  StaggerItem,
+  FloatingElement
+} from "../../shared/kinetic-interactions.jsx";
+
+// Import image effects
+import {
+  BrutalistFrame,
+  GlitchImage,
+  SplitRGBImage,
+  ScanlineImage,
+} from "../../shared/kinetic-image-effects.jsx";
+
 import francescoPhoto from "./assets/francesco_photo.jpg";
 import contentData from "./content.json";
 import "./App.css";
@@ -103,79 +125,16 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-xl font-bold text-primary"
-            >
-              {content.personal.name} F.
-            </motion.div>
+      {/* Kinetic Cursor */}
+      <KineticCursor />
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              {sections.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`capitalize transition-colors hover:text-primary ${
-                    activeSection === item
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="md:hidden bg-background border-t border-border"
-              >
-                <div className="px-4 py-2 space-y-2">
-                  {sections.map((item) => (
-                    <button
-                      key={item}
-                      onClick={() => scrollToSection(item)}
-                      className="block w-full text-left py-2 capitalize hover:text-primary transition-colors"
-                    >
-                      {item}
-                    </button>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
 
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center pt-16"
+        className="min-h-screen flex items-center justify-center"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -186,90 +145,133 @@ function App() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                {content.hero.greeting}{" "}
-                <span className="text-primary">{content.personal.name}</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tighter uppercase overflow-hidden">
+                <motion.span
+                  className="inline-block"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  HI,{" "}
+                </motion.span>
+                <motion.span
+                  className="inline-block"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  I'M
+                </motion.span>
+                <br />
+                <motion.span
+                  className="inline-block text-accent relative"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  FRANCESCO
+                  <motion.div
+                    className="absolute -bottom-2 left-0 h-1 bg-accent"
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  />
+                </motion.span>
+                <motion.span
+                  className="inline-block text-accent"
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {" "}F.
+                </motion.span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
                 {content.hero.description}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button
-                  onClick={() =>
-                    handleButtonAction(content.hero.buttons.primary)
-                  }
-                  size="lg"
-                  className="group"
-                >
-                  {content.hero.buttons.primary.text}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() =>
-                    handleButtonAction(content.hero.buttons.secondary)
-                  }
-                >
-                  {content.hero.buttons.secondary.text}
-                </Button>
+                <MagneticButton>
+                  <Button
+                    onClick={() =>
+                      handleButtonAction(content.hero.buttons.primary)
+                    }
+                    size="lg"
+                    className="group"
+                  >
+                    {content.hero.buttons.primary.text}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </MagneticButton>
+                <MagneticButton>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    onClick={() =>
+                      handleButtonAction(content.hero.buttons.secondary)
+                    }
+                  >
+                    {content.hero.buttons.secondary.text}
+                  </Button>
+                </MagneticButton>
               </div>
             </motion.div>
 
-            {/* Photo */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
+            {/* Photo - Brutalist Image Effects */}
+            <RevealOnScroll direction="right" delay={0.2}>
               <div className="relative w-full max-w-md mx-auto">
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 1, 0],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="relative z-10"
-                >
-                  <img
+                {/* Main image with effects */}
+                <FloatingElement duration={4} yOffset={15}>
+                  <BrutalistFrame
                     src={francescoPhoto}
                     alt={content.personal.name}
-                    className="w-full h-auto rounded-2xl shadow-2xl"
+                    className="relative z-10"
                   />
-                </motion.div>
+                </FloatingElement>
 
-                {/* Floating elements */}
+                {/* Accent geometric shapes */}
                 <motion.div
                   animate={{
-                    y: [0, -15, 0],
-                    x: [0, 5, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -top-4 -right-4 w-20 h-20 bg-primary/10 rounded-full blur-xl"
-                />
-                <motion.div
-                  animate={{
-                    y: [0, 10, 0],
-                    x: [0, -5, 0],
+                    rotate: [0, 5, 0],
+                    scale: [1, 1.1, 1],
                   }}
                   transition={{
                     duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent/20 rounded-full blur-lg"
+                  className="absolute -top-8 -right-8 w-20 h-20 bg-accent opacity-20 z-0"
                 />
+                <motion.div
+                  animate={{
+                    rotate: [0, -5, 0],
+                    scale: [1, 1.15, 1],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                  className="absolute -bottom-8 -left-8 w-24 h-24 border-4 border-accent opacity-30 z-0"
+                />
+
+                {/* Glitch effect overlay */}
+                <div className="absolute top-0 right-0 w-32 h-32 pointer-events-none">
+                  <motion.div
+                    animate={{
+                      opacity: [0, 0.5, 0],
+                      scale: [0.8, 1.2, 0.8],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="w-full h-full bg-accent blur-3xl"
+                  />
+                </div>
               </div>
-            </motion.div>
+            </RevealOnScroll>
           </div>
         </div>
       </section>
@@ -373,12 +375,12 @@ function App() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full text-center hover:shadow-lg transition-shadow">
+                <Card className="h-full text-center border-2 hover:border-accent hover:-translate-y-2 transition-all">
                   <CardHeader>
-                    <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
+                    <div className="mx-auto mb-4 bg-accent text-black w-16 h-16 flex items-center justify-center">
                       {iconMap[step.icon]}
                     </div>
-                    <CardTitle className="text-lg">{step.title}</CardTitle>
+                    <CardTitle className="text-lg font-black uppercase tracking-tight">{step.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-sm leading-relaxed">

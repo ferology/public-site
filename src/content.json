@@ -1,97 +1,98 @@
 {
   "personal": {
     "name": "Francesco",
-    "title": "I'm an experience consultant and organizational strategist working at the intersection of design, technology, and transformation.",
+    "title": "Director of Experience – Multi-Brand Digital Ecosystems",
     "photo": "./assets/francesco_photo.jpg",
     "email": "f3r4.mac@gmail.com",
     "linkedin": "https://linkedin.com/in/ferology",
-    "phone": "+1234567890"
+    "phone": "+39 3389933465"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "description": "Experience practitioner crafting meaningful digital experiences through user-centered design and strategic thinking.",
+    "description": "Director of Experience with 15+ years building top-rated multi-brand digital ecosystems for Fortune 500 companies. I turn UX into a measurable growth engine.",
     "buttons": {
       "primary": {
-        "text": "Learn More",
+        "text": "View Leadership Impact",
         "action": "scroll",
         "target": "about"
       },
       "secondary": {
-        "text": "Get In Touch",
+        "text": "Let's Connect",
         "action": "scroll",
         "target": "contact"
       }
     }
   },
   "about": {
-    "title": "About Me",
-    "subtitle": "I'm an experience consultant and organizational strategist working at the intersection of design, technology, and transformation",
+    "title": "Executive Leadership in Experience Strategy",
+    "subtitle": "Building unified digital ecosystems that drive conversion, engagement, and operational efficiency at enterprise scale",
     "journey": {
-      "title": "My Journey",
+      "title": "Strategic Impact",
       "content": [
-        "I help global companies reframe how they adopt emerging technologies in ways that are sustainable, human-centered, and culturally aware. My passion lies in understanding user needs and translating them into intuitive, accessible, and beautiful interfaces.",
-        "I believe great design is not just about aesthetics—it's about solving real problems and creating value for both users and businesses. Every project is an opportunity to make a positive impact through thoughtful, user-centered design."
+        "I lead multi-brand experience strategies across web, app, and connected platforms—unifying consumer journeys while driving measurable business outcomes. At a leading automotive group, I improved operational efficiency by +60% and boosted experience impact by +12% through analytics, A/B testing, and AI-driven personalization.",
+        "I've also scaled UX organizations to 145 designers across 7 hubs and created enterprise-level design systems that improved global consistency by +80%. I partner with Product, Engineering, Marketing, and IoT teams to align around shared KPIs—turning UX into a strategic growth driver."
       ]
     },
     "skills": {
-      "title": "Skills & Expertise",
+      "title": "Executive Capabilities",
       "list": [
-        "User Experience Design",
-        "Design Systems",
-        "Prototyping",
-        "User Research",
-        "Interface Design",
-        "Design Strategy"
+        "Multi-Brand Ecosystems",
+        "Experience Strategy & KPIs",
+        "Design Systems at Scale",
+        "CRO • Analytics • A/B Testing",
+        "AI-Driven Personalization",
+        "Organization Scaling",
+        "Cross-Functional Leadership",
+        "Data-Driven Growth"
       ]
     }
   },
   "process": {
-    "title": "My Design Process",
-    "subtitle": "A systematic approach to creating user-centered solutions that deliver measurable results.",
+    "title": "Strategic Experience Framework",
+    "subtitle": "Evidence-based approach to building multi-brand ecosystems that deliver measurable business impact",
     "steps": [
       {
         "icon": "Target",
-        "title": "Research & Discovery",
-        "description": "Understanding user needs, business goals, and market context through comprehensive research and analysis."
+        "title": "Strategic Alignment",
+        "description": "Define unified experience vision across Product, Engineering, Marketing, and IoT. Establish shared KPIs: conversion, engagement, retention, NPS."
       },
       {
         "icon": "Lightbulb",
-        "title": "Ideation & Strategy",
-        "description": "Developing creative solutions and strategic approaches based on research insights and user requirements."
+        "title": "Systems & Architecture",
+        "description": "Build centralized design systems and foundational components that scale across markets. Drive consistency while enabling local flexibility."
       },
       {
         "icon": "Zap",
-        "title": "Design & Prototype",
-        "description": "Creating high-fidelity designs and interactive prototypes to validate concepts and user flows."
+        "title": "Data & Optimization",
+        "description": "Implement analytics frameworks, experimentation pipelines, and A/B testing. Use ML and AI to personalize at scale with measurable lift."
       },
       {
         "icon": "Users",
-        "title": "Test & Iterate",
-        "description": "Conducting user testing and iterating on designs based on feedback and performance metrics."
+        "title": "Organization & Culture",
+        "description": "Scale teams through design ops, governance, and tooling. Build evidence-based culture where experience decisions drive business growth."
       }
     ]
   },
   "contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Ready to create something amazing? I'd love to hear about your project and discuss how we can bring your vision to life.",
+    "title": "Let's Drive Experience Impact Together",
+    "subtitle": "Available for executive advisory, multi-brand ecosystem strategy, and organizational transformation engagements.",
     "buttons": {
       "primary": {
-        "text": "Medium Blog",
+        "text": "Read My Insights",
         "action": "link",
         "target": "https://medium.com/@f3r4.mac"
       },
       "secondary": {
-        "text": "LinkedIn",
+        "text": "Connect on LinkedIn",
         "action": "link",
         "target": "https://www.linkedin.com/in/ferology/"
       }
     }
   },
   "footer": {
-    "copyright": "© 2024 Francesco F. All rights reserved."
+    "copyright": "© 2024 Francesco Fera – Director of Experience. All rights reserved."
   },
   "navigation": {
     "sections": ["home", "about", "process", "contact"]
   }
 }
-
