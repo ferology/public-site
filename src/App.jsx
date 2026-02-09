@@ -29,7 +29,6 @@ import {
 
 // Import kinetic interactions
 import {
-  KineticCursor,
   ScrollProgress,
   MagneticButton,
   TiltCard,
@@ -125,9 +124,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Kinetic Cursor */}
-      <KineticCursor />
-
       {/* Scroll Progress Bar */}
       <ScrollProgress />
 
