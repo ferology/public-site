@@ -38,7 +38,7 @@ import {
   StaggerContainer,
   StaggerItem,
   FloatingElement
-} from "../../shared/kinetic-interactions.jsx";
+} from "./shared/kinetic-interactions.jsx";
 
 // Import image effects
 import {
@@ -46,7 +46,7 @@ import {
   GlitchImage,
   SplitRGBImage,
   ScanlineImage,
-} from "../../shared/kinetic-image-effects.jsx";
+} from "./shared/kinetic-image-effects.jsx";
 
 import francescoPhoto from "./assets/francesco_photo.jpg";
 import contentData from "./content.json";
