@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "../../shared/kinetic-theme.css";
+@import "./shared/kinetic-theme.css";
 
 @custom-variant dark (&:is(.dark *));
 
