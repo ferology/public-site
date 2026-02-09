@@ -47,6 +47,14 @@ import {
   ScanlineImage,
 } from "./shared/kinetic-image-effects.jsx";
 
+// Import reflection scroll effects
+import {
+  ReflectionImage,
+  ReflectionSection,
+  GlossyCard,
+  ScrollReflectionText
+} from "./shared/reflection-scroll.jsx";
+
 import francescoPhoto from "./assets/francesco_photo.jpg";
 import contentData from "./content.json";
 import "./App.css";
@@ -212,9 +220,9 @@ function App() {
               </div>
             </motion.div>
 
-            {/* Photo - Brutalist Image Effects */}
+            {/* Photo - Brutalist Image Effects with Reflection */}
             <RevealOnScroll direction="right" delay={0.2}>
-              <div className="relative w-full max-w-md mx-auto">
+              <ReflectionSection className="w-full max-w-md mx-auto">
                 {/* Main image with effects */}
                 <FloatingElement duration={4} yOffset={15}>
                   <BrutalistFrame
@@ -266,7 +274,7 @@ function App() {
                     className="w-full h-full bg-accent blur-3xl"
                   />
                 </div>
-              </div>
+              </ReflectionSection>
             </RevealOnScroll>
           </div>
         </div>
@@ -371,7 +379,8 @@ function App() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full text-center border-2 hover:border-accent hover:-translate-y-2 transition-all">
+                <GlossyCard className="h-full">
+                  <Card className="h-full text-center border-2 hover:border-accent hover:-translate-y-2 transition-all">
                   <CardHeader>
                     <div className="mx-auto mb-4 bg-accent text-black w-16 h-16 flex items-center justify-center">
                       {iconMap[step.icon]}
@@ -384,6 +393,7 @@ function App() {
                     </CardDescription>
                   </CardContent>
                 </Card>
+                </GlossyCard>
               </motion.div>
             ))}
           </div>
