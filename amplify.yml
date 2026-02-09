@@ -6,7 +6,7 @@ frontend:
         - nvm install 20
         - nvm use 20
         - npm install -g pnpm@10.4.1
-        - pnpm install --frozen-lockfile
+        - pnpm install
     build:
       commands:
         - pnpm build
